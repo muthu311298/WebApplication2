@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -9,8 +11,10 @@ using System.Threading.Tasks;
 
 namespace WebApplication2
 {
-    public class Program
+    public class Program : ProgramBase
     {
+        private const string Value = "Hello Muthu";
+
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
